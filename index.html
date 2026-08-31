@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="ROYAL TIMECRAFT - Timeless luxury watches crafted with precision, elegance and contemporary design.">
+
+    <meta name="keywords"
+        content="luxury watches, premium watches, royal timecraft, men's watches, women's watches">
+
+    <title>ROYAL TIMECRAFT | Timeless Luxury</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav id="mainNavbar" class="navbar navbar-expand-xl fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand brand-text" href="#home">
+                ROYAL TIMECRAFT
+            </a>
+
+            <div class="nav-actions d-flex align-items-center gap-2 order-xl-3">
+
+                <!-- Search -->
+                <button class="icon-btn" id="searchBtn" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+
+                <!-- Wishlist -->
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+
+                    <i class="bi bi-heart"></i>
+
+                    <span id="wishlistCount" class="badge-count">
+                        0
+                    </span>
+
+                </button>
+
+                <!-- Cart -->
+                <button class="icon-btn" id="cartBtn" aria-label="Shopping bag">
+
+                    <i class="bi bi-bag"></i>
+
+                    <span id="cartCount" class="badge-count">
+                        0
+                    </span>
+
+                </button>
+
+                <!-- Mobile Menu -->
+                <button
+                    class="navbar-toggler ms-1"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu"
+                    aria-label="Open menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Desktop Navigation -->
+
+            <div class="collapse navbar-collapse order-xl-2" id="desktopNav">
+
+                <ul class="navbar-nav mx-auto gap-xl-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#collections">
+                            Collections
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#watches">
+                            Watches
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+
+        <div class="offcanvas-header">
+
+            <div class="brand-text">
+                ROYAL TIMECRAFT
+            </div>
+
+            <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close">
+            </button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" data-bs-dismiss="offcanvas">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#collections" data-bs-dismiss="offcanvas">
+                        Collections
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#watches" data-bs-dismiss="offcanvas">
+                        Watches
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" data-bs-dismiss="offcanvas">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SEARCH OVERLAY ================= -->
+
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+
+        <div class="search-content">
+
+            <button
+                class="search-close"
+                id="searchClose"
+                aria-label="Close search">
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+            <h2 class="search-title">
+                Search the collection
+            </h2>
+
+            <div class="search-input-wrap">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search watches..."
+                    autocomplete="off">
+
+            </div>
+
+            <div class="search-suggestions">
+
+                <p class="suggestion-label">
+                    Popular
+                </p>
+
+                <div class="d-flex flex-wrap gap-2">
+
+                    <button
+                        class="suggestion-chip"
+                        data-search="Royale">
+                        Royale
+                    </button>
+
+                    <button
+                        class="suggestion-chip"
+                        data-search="Eclipse">
+                        Eclipse
+                    </button>
+
+                    <button
+                        class="suggestion-chip"
+                        data-search="Classic">
+                        Classic
+                    </button>
+
+                    <button
+                        class="suggestion-chip"
+                        data-search="Titan">
+                        Titan
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                class="search-results"
+                id="searchResults">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section id="home" class="hero-section">
+
+            <div class="hero-bg"></div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content min-vh-100 d-flex align-items-center">
+
+                <div class="row w-100 align-items-center">
+
+                    <!-- Hero Text -->
+
+                    <div class="col-lg-6 hero-text-col reveal-left">
+
+                        <p class="hero-tagline">
+                            TIMELESS PRECISION
+                        </p>
+
+                        <h1 class="hero-title">
+
+                            TIME,
+                            <br>
+
+                            <span class="hero-title-accent">
+                                REDEFINED.
+                            </span>
+
+                        </h1>
+
+                        <p class="hero-desc">
+
+                            Precision-engineered watches for those who
+                            appreciate the art of every second.
+                            Contemporary design, enduring craftsmanship.
+
+                        </p>
+
+                        <div class="hero-cta">
+
+                            <a
+                                href="#watches"
+                                class="btn btn-gold">
+
+                                Shop Collection
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </a>
+
+
+                            <a
+                                href="#collections"
+                                class="btn btn-outline-light">
+
+                                Explore
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero Image -->
+
+                    <div class="col-lg-6 hero-image-col reveal-right">
+
+                        <div class="hero-watch-wrap">
+
+                            <img
+                                class="hero-watch-img"
+                                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85"
+                                alt="Royal Timecraft luxury watch">
+
+                            <div class="hero-watch-glow"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="hero-scroll"
+                href="#about"
+                aria-label="Scroll to introduction">
+
+                <span>
+                    SCROLL
+                </span>
+
+                <div class="scroll-line"></div>
+
+            </a>
+
+        </section>
+
+
+        <!-- ================= ABOUT / BRAND ================= -->
+
+        <section id="about" class="section brand-intro">
+
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+
+                    <div class="col-lg-6 reveal-left">
+
+                        <p class="section-eyebrow">
+                            THE ROYAL TIMECRAFT STORY
+                        </p>
+
+                        <h2 class="section-title-serif">
+
+                            Crafted for those who appreciate
+                            every second.
+
+                        </h2>
+
+                        <p class="brand-intro-text">
+
+                            ROYAL TIMECRAFT brings together precision
+                            engineering, timeless craftsmanship and
+                            contemporary design.
+
+                            Every detail is considered to create a watch
+                            that feels as exceptional as the moment it measures.
+
+                        </p>
+
+                        <p class="brand-intro-text">
+
+                            From the first sketch to the final polish,
+                            our philosophy is simple:
+
+                            <strong>
+                                make time beautiful.
+                            </strong>
+
+                        </p>
+
+
+                        <div class="brand-stats">
+
+                            <div class="brand-stat">
+
+                                <span class="stat-number">
+                                    12+
+                                </span>
+
+                                <span class="stat-label">
+                                    Collections
+                                </span>
+
+                            </div>
+
+
+                            <div class="brand-stat">
+
+                                <span class="stat-number">
+                                    35K
+                                </span>
+
+                                <span class="stat-label">
+                                    Collectors
+                                </span>
+
+                            </div>
+
+
+                            <div class="brand-stat">
+
+                                <span class="stat-number">
+                                    2Y
+                                </span>
+
+                                <span class="stat-label">
+                                    Warranty
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6 reveal-right">
+
+                        <div class="brand-image-wrap">
+
+                            <img
+                                class="brand-image"
+                                src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1000&q=85"
+                                alt="Luxury watch craftsmanship">
+
+                            <div class="brand-image-accent"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COLLECTION CATEGORIES ================= -->
+
+        <section
+            id="collections"
+            class="section collection-categories">
+
+            <div class="container">
+
+
+                <div class="section-header text-center reveal-up">
+
+                    <p class="section-eyebrow">
+                        CURATED FOR YOU
+                    </p>
+
+                    <h2 class="section-title-serif">
+                        Explore the collections
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Designed to complement every expression,
+                        occasion and ambition.
+
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Men's -->
+
+                    <div class="col-md-4 reveal-up">
+
+                        <a
+                            class="category-card"
+                            href="#watches"
+                            data-category="Men's">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=85"
+                                alt="Men's watch collection">
+
+                            <div class="category-overlay"></div>
+
+                            <div class="category-content">
+
+                                <h3>
+                                    Men's Collection
+                                </h3>
+
+                                <span class="category-cta">
+
+                                    Discover
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Women's -->
+
+                    <div
+                        class="col-md-4 reveal-up"
+                        style="--delay:.1s">
+
+                        <a
+                            class="category-card"
+                            href="#watches"
+                            data-category="Women's">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+                                alt="Women's watch collection">
+
+                            <div class="category-overlay"></div>
+
+                            <div class="category-content">
+
+                                <h3>
+                                    Women's Collection
+                                </h3>
+
+                                <span class="category-cta">
+
+                                    Discover
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Limited Edition -->
+
+                    <div
+                        class="col-md-4 reveal-up"
+                        style="--delay:.2s">
+
+                        <a
+                            class="category-card"
+                            href="#watches"
+                            data-category="Limited Edition">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=900&q=85"
+                                alt="Limited edition luxury watch">
+
+                            <div class="category-overlay"></div>
+
+                            <div class="category-content">
+
+                                <h3>
+                                    Limited Edition
+                                </h3>
+
+                                <span class="category-cta">
+
+                                    Discover
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WATCH PRODUCTS ================= -->
+
+        <section
+            id="watches"
+            class="section section-dark">
+
+            <div class="container">
+
+
+                <div class="section-header text-center reveal-up">
+
+                    <p class="section-eyebrow">
+                        THE COLLECTION
+                    </p>
+
+                    <h2 class="section-title-serif">
+                        Signature timepieces
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        A refined selection of our most sought-after designs.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Filters -->
+
+                <div class="filter-bar">
+
+
+                    <div
+                        class="filter-tabs"
+                        id="filterTabs">
+
+                        <button
+                            class="filter-tab active"
+                            data-filter="all">
+
+                            All
+
+                        </button>
+
+
+                        <button
+                            class="filter-tab"
+                            data-filter="Men's">
+
+                            Men's
+
+                        </button>
+
+
+                        <button
+                            class="filter-tab"
+                            data-filter="Women's">
+
+                            Women's
+
+                        </button>
+
+
+                        <button
+                            class="filter-tab"
+                            data-filter="Classic">
+
+                            Classic
+
+                        </button>
+
+
+                        <button
+                            class="filter-tab"
+                            data-filter="Luxury">
+
+                            Luxury
+
+                        </button>
+
+
+                        <button
+                            class="filter-tab"
+                            data-filter="Limited Edition">
+
+                            Limited Edition
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="sort-wrap">
+
+                        <label
+                            class="sort-label"
+                            for="sortSelect">
+
+                            Sort
+
+                        </label>
+
+                        <select
+                            class="sort-select"
+                            id="sortSelect">
+
+                            <option value="default">
+                                Featured
+                            </option>
+
+                            <option value="low">
+                                Price: Low to High
+                            </option>
+
+                            <option value="high">
+                                Price: High to Low
+                            </option>
+
+                            <option value="rating">
+                                Best Rated
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product Grid -->
+
+                <div
+                    class="row g-4"
+                    id="productGrid">
+                </div>
+
+
+                <!-- No Results -->
+
+                <div
+                    class="no-results text-center d-none"
+                    id="noResults">
+
+                    <i class="bi bi-watch"></i>
+
+                    <p>
+                        No watches match your selection.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMO ================= -->
+
+        <section class="promo-banner">
+
+            <div class="promo-bg"></div>
+
+            <div class="promo-overlay"></div>
+
+            <div
+                class="container text-center promo-content reveal-scale">
+
+                <p class="promo-eyebrow">
+                    ROYAL TIMECRAFT ATELIER
+                </p>
+
+                <h2 class="promo-title">
+                    THE ART OF TIME
+                </h2>
+
+                <p class="promo-desc">
+
+                    Discover a limited series shaped by bold proportions,
+                    refined materials and uncompromising attention to detail.
+
+                </p>
+
+                <a
+                    href="#watches"
+                    class="btn btn-gold">
+
+                    Discover Now
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY CHOOSE US ================= -->
+
+        <section class="section why-choose-us">
+
+            <div class="container">
+
+
+                <div class="section-header text-center reveal-up">
+
+                    <p class="section-eyebrow">
+                        THE ROYAL TIMECRAFT STANDARD
+                    </p>
+
+                    <h2 class="section-title-serif">
+                        Why choose us
+                    </h2>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Feature 1 -->
+
+                    <div
+                        class="col-sm-6 col-lg-3 reveal-up">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+
+                                <i class="bi bi-bullseye"></i>
+
+                            </div>
+
+                            <h3>
+                                Precision Engineering
+                            </h3>
+
+                            <p>
+
+                                Engineered for reliable performance
+                                and precise timekeeping.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+
+                    <div
+                        class="col-sm-6 col-lg-3 reveal-up"
+                        style="--delay:.1s">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+
+                                <i class="bi bi-gem"></i>
+
+                            </div>
+
+                            <h3>
+                                Premium Materials
+                            </h3>
+
+                            <p>
+
+                                Carefully selected metals, crystals
+                                and straps for lasting quality.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+
+                    <div
+                        class="col-sm-6 col-lg-3 reveal-up"
+                        style="--delay:.2s">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+
+                                <i class="bi bi-shield-check"></i>
+
+                            </div>
+
+                            <h3>
+                                2-Year Warranty
+                            </h3>
+
+                            <p>
+
+                                Confidence backed by a comprehensive
+                                two-year warranty.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 4 -->
+
+                    <div
+                        class="col-sm-6 col-lg-3 reveal-up"
+                        style="--delay:.3s">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+
+                                <i class="bi bi-box-seam"></i>
+
+                            </div>
+
+                            <h3>
+                                Secure Worldwide Delivery
+                            </h3>
+
+                            <p>
+
+                                Protected packaging and tracked delivery
+                                to your doorstep.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WATCH DETAIL ================= -->
+
+        <section class="section watch-detail">
+
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+
+                    <div class="col-lg-6 reveal-left">
+
+                        <div class="detail-image-wrap">
+
+                            <img
+                                class="detail-image"
+                                src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?auto=format&fit=crop&w=1100&q=85"
+                                alt="Royal Timecraft watch detail">
+
+                            <div class="detail-badge">
+
+                                <span class="badge-number">
+                                    01
+                                </span>
+
+                                <span class="badge-text">
+                                    Atelier Series
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6 reveal-right">
+
+                        <p class="section-eyebrow">
+                            CRAFTED TO LAST
+                        </p>
+
+                        <h2 class="section-title-serif text-white">
+
+                            Every component has a purpose.
+
+                        </h2>
+
+                        <p class="detail-desc">
+
+                            From the case architecture to the finishing
+                            of each dial, our watches are built around
+                            a quiet obsession with proportion, balance
+                            and precision.
+
+                        </p>
+
+
+                        <div class="specs-grid">
+
+
+                            <div class="spec-item">
+
+                                <span class="spec-label">
+                                    Case Material
+                                </span>
+
+                                <span class="spec-value">
+                                    316L Steel
+                                </span>
+
+                            </div>
+
+
+                            <div class="spec-item">
+
+                                <span class="spec-label">
+                                    Movement
+                                </span>
+
+                                <span class="spec-value">
+                                    Automatic
+                                </span>
+
+                            </div>
+
+
+                            <div class="spec-item">
+
+                                <span class="spec-label">
+                                    Water Resistance
+                                </span>
+
+                                <span class="spec-value">
+                                    100M
+                                </span>
+
+                            </div>
+
+
+                            <div class="spec-item">
+
+                                <span class="spec-label">
+                                    Strap
+                                </span>
+
+                                <span class="spec-value">
+                                    Italian Leather
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TESTIMONIALS ================= -->
+
+        <section class="section testimonials">
+
+            <div class="container">
+
+
+                <div class="section-header text-center reveal-up">
+
+                    <p class="section-eyebrow">
+                        COLLECTOR NOTES
+                    </p>
+
+                    <h2 class="section-title-serif">
+                        What they say
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="testimonialCarousel"
+                    class="carousel slide reveal-scale"
+                    data-bs-ride="carousel">
+
+
+                    <div class="carousel-inner">
+
+
+                        <!-- Testimonial 1 -->
+
+                        <div class="carousel-item active">
+
+                            <div class="testimonial-card">
+
+                                <div class="testimonial-stars">
+                                    ★★★★★
+                                </div>
+
+                                <p class="testimonial-text">
+
+                                    “The finish is exceptional.
+                                    It feels understated in the best
+                                    possible way, but still gets noticed.”
+
+                                </p>
+
+
+                                <div class="testimonial-author">
+
+                                    <img
+                                        src="https://i.pravatar.cc/120?img=12"
+                                        alt="Arjun profile">
+
+                                    <div>
+
+                                        <h4>
+                                            Arjun Mehta
+                                        </h4>
+
+                                        <span>
+                                            Verified Collector
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Testimonial 2 -->
+
+                        <div class="carousel-item">
+
+                            <div class="testimonial-card">
+
+                                <div class="testimonial-stars">
+                                    ★★★★★
+                                </div>
+
+                                <p class="testimonial-text">
+
+                                    “Beautiful proportions,
+                                    comfortable on the wrist and
+                                    the packaging feels genuinely premium.”
+
+                                </p>
+
+
+                                <div class="testimonial-author">
+
+                                    <img
+                                        src="https://i.pravatar.cc/120?img=47"
+                                        alt="Sophia profile">
+
+                                    <div>
+
+                                        <h4>
+                                            Sophia Bennett
+                                        </h4>
+
+                                        <span>
+                                            Verified Collector
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Testimonial 3 -->
+
+                        <div class="carousel-item">
+
+                            <div class="testimonial-card">
+
+                                <div class="testimonial-stars">
+                                    ★★★★★
+                                </div>
+
+                                <p class="testimonial-text">
+
+                                    “A refined everyday watch with
+                                    the presence of something much
+                                    more expensive.”
+
+                                </p>
+
+
+                                <div class="testimonial-author">
+
+                                    <img
+                                        src="https://i.pravatar.cc/120?img=33"
+                                        alt="Daniel profile">
+
+                                    <div>
+
+                                        <h4>
+                                            Daniel Carter
+                                        </h4>
+
+                                        <span>
+                                            Verified Collector
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Controls -->
+
+                    <div class="testimonial-controls">
+
+                        <button
+                            class="testimonial-arrow"
+                            type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev"
+                            aria-label="Previous">
+
+                            <i class="bi bi-arrow-left"></i>
+
+                        </button>
+
+
+                        <div
+                            class="carousel-indicators custom-indicators position-static">
+
+                            <button
+                                type="button"
+                                data-bs-target="#testimonialCarousel"
+                                data-bs-slide-to="0"
+                                class="active"
+                                aria-label="Slide 1">
+                            </button>
+
+                            <button
+                                type="button"
+                                data-bs-target="#testimonialCarousel"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2">
+                            </button>
+
+                            <button
+                                type="button"
+                                data-bs-target="#testimonialCarousel"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3">
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            class="testimonial-arrow"
+                            type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next"
+                            aria-label="Next">
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section
+            class="newsletter-section"
+            id="contact">
+
+            <div
+                class="container text-center newsletter-inner reveal-up">
+
+                <p class="section-eyebrow">
+                    PRIVATE ACCESS
+                </p>
+
+                <h2 class="section-title-serif">
+                    STAY IN THE MOMENT
+                </h2>
+
+                <p class="newsletter-desc">
+
+                    Be the first to discover new collections,
+                    exclusive releases and private offers.
+
+                </p>
+
+
+                <form
+                    class="newsletter-form"
+                    id="newsletterForm"
+                    novalidate>
+
+                    <div class="newsletter-input-wrap">
+
+                        <input
+                            id="newsletterEmail"
+                            type="email"
+                            placeholder="Your email address"
+                            aria-label="Email address"
+                            required>
+
+                        <button
+                            class="btn btn-gold"
+                            type="submit">
+
+                            Subscribe
+
+                        </button>
+
+                    </div>
+
+
+                    <p
+                        id="newsletterError"
+                        class="newsletter-error">
+                    </p>
+
+
+                    <p
+                        id="newsletterSuccess"
+                        class="newsletter-success">
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <!-- Brand -->
+
+                <div class="col-lg-4">
+
+                    <div class="footer-brand">
+                        ROYAL TIMECRAFT
+                    </div>
+
+                    <p class="footer-about-text">
+
+                        Timeless precision,
+                        contemporary design.
+
+                        Watches made for moments
+                        that matter.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Pinterest">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Shop -->
+
+                <div class="col-6 col-lg-2">
+
+                    <h3 class="footer-title">
+                        Shop
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#watches">
+                                All Watches
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#watches">
+                                Men's
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#watches">
+                                Women's
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#watches">
+                                Limited Edition
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Service -->
+
+                <div class="col-6 col-lg-2">
+
+                    <h3 class="footer-title">
+                        Service
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#contact">
+                                Shipping
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Warranty
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Returns
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Support
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="col-lg-4">
+
+                    <h3 class="footer-title">
+                        Contact
+                    </h3>
+
+                    <ul class="footer-contact">
+
+                        <li>
+
+                            <i class="bi bi-envelope"></i>
+
+                            concierge@royaltimecraft.com
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-telephone"></i>
+
+                            +91 00000 00000
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            Chennai · India
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <hr class="footer-divider">
+
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    ©
+                    <span id="year"></span>
+
+                    ROYAL TIMECRAFT.
+                    All rights reserved.
+
+                </p>
+
+
+                <div class="footer-legal">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CART / WISHLIST SIDEBAR ================= -->
+
+    <div
+        class="overlay"
+        id="pageOverlay">
+    </div>
+
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar"
+        aria-label="Shopping cart">
+
+
+        <div class="cart-sidebar-header">
+
+            <h3 id="sidebarTitle">
+                Your Bag
+            </h3>
+
+            <button
+                class="cart-close"
+                id="sidebarClose"
+                aria-label="Close">
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-sidebar-body"
+            id="sidebarBody">
+        </div>
+
+
+        <div
+            class="cart-sidebar-footer"
+            id="cartFooter">
+
+            <div class="cart-subtotal">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <span id="cartSubtotal">
+                    ₹0
+                </span>
+
+            </div>
+
+
+            <p class="cart-note">
+
+                Taxes and shipping calculated
+                at checkout.
+
+            </p>
+
+
+            <button
+                class="btn btn-gold w-100"
+                id="checkoutBtn">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= QUICK VIEW MODAL ================= -->
+
+    <div
+        class="modal fade"
+        id="quickViewModal"
+        tabindex="-1"
+        aria-hidden="true">
+
+        <div
+            class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content quick-view-content">
+
+
+                <button
+                    class="quick-view-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+
+                    <i class="bi bi-x-lg"></i>
+
+                </button>
+
+
+                <div class="row g-0">
+
+
+                    <!-- Image -->
+
+                    <div class="col-md-6">
+
+                        <div class="quick-view-image-wrap">
+
+                            <img
+                                id="qvImage"
+                                src=""
+                                alt="">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Information -->
+
+                    <div class="col-md-6">
+
+                        <div class="quick-view-info">
+
+                            <span
+                                id="qvCategory"
+                                class="qv-category">
+                            </span>
+
+
+                            <h2
+                                id="qvTitle"
+                                class="qv-title">
+                            </h2>
+
+
+                            <div
+                                id="qvRating"
+                                class="qv-rating">
+                            </div>
+
+
+                            <div
+                                id="qvPrice"
+                                class="qv-price">
+                            </div>
+
+
+                            <p
+                                id="qvDesc"
+                                class="qv-desc">
+                            </p>
+
+
+                            <div class="qv-actions">
+
+                                <button
+                                    class="btn btn-add-cart"
+                                    id="qvAdd">
+
+                                    Add to Cart
+
+                                </button>
+
+
+                                <button
+                                    class="btn btn-outline"
+                                    id="qvWish"
+                                    aria-label="Add to wishlist">
+
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        class="toast-container"
+        id="toastContainer">
+    </div>
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+        <i class="bi bi-arrow-up"></i>
+
+    </button>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
